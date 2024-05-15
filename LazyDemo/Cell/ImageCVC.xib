@@ -1,21 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageCVC" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="ImageCVC" customModule="LazyDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="179" height="194"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="179" height="194"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5K-pi-Njt">
+                        <rect key="frame" x="0.0" y="0.0" width="179" height="194"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cyj-Bu-IDP" customClass="CustomImageView" customModule="LazyDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="179" height="194"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cyj-Bu-IDP" secondAttribute="trailing" id="9G4-6o-bMi"/>
+                            <constraint firstAttribute="bottom" secondItem="Cyj-Bu-IDP" secondAttribute="bottom" id="L4h-pR-toh"/>
+                            <constraint firstItem="Cyj-Bu-IDP" firstAttribute="leading" secondItem="h5K-pi-Njt" secondAttribute="leading" id="cU7-1n-LyH"/>
+                            <constraint firstItem="Cyj-Bu-IDP" firstAttribute="top" secondItem="h5K-pi-Njt" secondAttribute="top" id="tD2-yJ-yvu"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="h5K-pi-Njt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PbU-8L-YUL"/>
+                <constraint firstAttribute="trailing" secondItem="h5K-pi-Njt" secondAttribute="trailing" id="bzO-w6-hQ3"/>
+                <constraint firstItem="h5K-pi-Njt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cbc-Es-V5P"/>
+                <constraint firstAttribute="bottom" secondItem="h5K-pi-Njt" secondAttribute="bottom" id="ee0-KJ-OV6"/>
+            </constraints>
+            <size key="customSize" width="179" height="194"/>
+            <connections>
+                <outlet property="imgThumb" destination="Cyj-Bu-IDP" id="1e8-CW-KbR"/>
+            </connections>
+            <point key="canvasLocation" x="129.00763358778624" y="70.422535211267615"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
